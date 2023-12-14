@@ -1,0 +1,326 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --purple:#E23E57;
+  --purple-50:#88304E;
+  --purple-100:#522546;
+  --purple-150:#311D3F;
+}
+
+/* ----------------loader----------------- */
+.loader {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  border-radius: 10px;
+}
+
+.loader div {
+  width: 8%;
+  height: 24%;
+  background: rgb(128, 128, 128);
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  opacity: 0;
+  border-radius: 50px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  animation: fade458 1s linear infinite;
+}
+
+@keyframes fade458 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.25;
+  }
+}
+
+.loader .bar1 {
+  transform: rotate(0deg) translate(0, -130%);
+  animation-delay: 0s;
+}
+
+.loader .bar2 {
+  transform: rotate(30deg) translate(0, -130%);
+  animation-delay: -1.1s;
+}
+
+.loader .bar3 {
+  transform: rotate(60deg) translate(0, -130%);
+  animation-delay: -1s;
+}
+
+.loader .bar4 {
+  transform: rotate(90deg) translate(0, -130%);
+  animation-delay: -0.9s;
+}
+
+.loader .bar5 {
+  transform: rotate(120deg) translate(0, -130%);
+  animation-delay: -0.8s;
+}
+
+.loader .bar6 {
+  transform: rotate(150deg) translate(0, -130%);
+  animation-delay: -0.7s;
+}
+
+.loader .bar7 {
+  transform: rotate(180deg) translate(0, -130%);
+  animation-delay: -0.6s;
+}
+
+.loader .bar8 {
+  transform: rotate(210deg) translate(0, -130%);
+  animation-delay: -0.5s;
+}
+
+.loader .bar9 {
+  transform: rotate(240deg) translate(0, -130%);
+  animation-delay: -0.4s;
+}
+
+.loader .bar10 {
+  transform: rotate(270deg) translate(0, -130%);
+  animation-delay: -0.3s;
+}
+
+.loader .bar11 {
+  transform: rotate(300deg) translate(0, -130%);
+  animation-delay: -0.2s;
+}
+
+.loader .bar12 {
+  transform: rotate(330deg) translate(0, -130%);
+  animation-delay: -0.1s;
+}
+/* ---------------------------------------------------- */
+
+.registrationForm {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  overflow-y: auto; /* Allow vertical scrolling within the fixed component */
+}
+
+.registrationForm-inner {
+  width: 100%;
+  height: 100%; /* Use 100% height to fill the available space */
+  position: absolute; /* Use 'absolute' instead of 'fixed' for inner content */
+  top: 0;
+  left: 0;
+  background-color: #ffffff; /* Use a contrasting background color */
+  color: black;
+  overflow-y: auto; /* Allow vertical scrolling within the inner content */
+}
+
+.closebtn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: .5rem;
+}
+.present{
+  background-color: gray;
+}
+.present .active{
+background-color: rgb(60, 60, 158);
+}
+.bg-app {
+  /* background: conic-gradient(at 50% 25%, #0000 75%, #47d3ff 0),
+    conic-gradient(at 50% 25%, #0000 75%, #47d3ff 0) 60px 60px,
+    conic-gradient(at 50% 25%, #0000 75%, #47d3ff 0) calc(2 * 60px)
+      calc(2 * 60px),
+    conic-gradient(at 50% 25%, #0000 75%, #47d3ff 0) calc(3 * 60px)
+      calc(3 * 60px),
+    repeating-linear-gradient(135deg, #adafff 0 12.5%, #474bff 0 25%);
+  background-size: calc(4 * 60px) calc(4 * 60px); */
+  background-color: #88304E;
+}
+.dash-card {
+  width: 300px;
+  height: 250px;
+  border-radius: 30px;
+  background: #212121;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+              -15px -15px 30px rgb(60, 60, 60);
+ }
+ 
+ .bg-leftnav {
+  width: 100%;
+  height: 100%;
+  /* background-image: conic-gradient(from 0deg, orange, orangered, orange);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: orange; */
+  background-color: #88304E;
+}
+.navbar{
+  background-color: #E23E57!important;
+}
+
+
+
+
+/* *************************Dashboard-Card*********************** */
+/* Dashboard.css */
+.dashboard-card {
+  --bg: #f7f7f8;
+  --hover-bg: #FFE5F4;
+  --hover-text: #E50087;
+  --gradient-start: #FF94B6; /* Adjust these colors as needed */
+  --gradient-end: #FFD3E0; /* Adjust these colors as needed */
+  text-align: center;
+  background: var(--bg);
+  padding: 1.5em;
+  padding-block: 1.8em;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: .3s cubic-bezier(.6,.4,0,1), transform .15s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end)); /* Gradient */
+}
+
+.dashboard-card__body {
+  color: #464853;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+.dashboard-card > :not(span) {
+  transition: .3s cubic-bezier(.6,.4,0,1);
+}
+
+.dashboard-card > strong {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: -.035em;
+}
+
+.dashboard-card span {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--hover-text);
+  border-radius: 5px;
+  font-weight: bold;
+  top: 100%;
+  transition: all .3s cubic-bezier(.6,.4,0,1);
+}
+
+.dashboard-card:hover span {
+  top: 0;
+  font-size: 1.2em;
+}
+
+.dashboard-card:hover {
+  background: var(--hover-bg);
+}
+
+.dashboard-card:hover > div, .dashboard-card:hover > strong {
+  opacity: 0;
+}
+.shadow {
+  box-shadow: 5px 5px;
+}
+
+/* *************************Modal*********************** */
+.modal.left .modal-dialog,
+	.modal.right .modal-dialog {
+		position: fixed;
+		margin: auto;
+		width: 50%;
+		height: 100%;
+    right: 0;
+		-webkit-transform: translate3d(0%, 0, 0);
+		    -ms-transform: translate3d(0%, 0, 0);
+		     -o-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+	}
+  .modal.left .modal-content,
+	.modal.right .modal-content {
+		height: 100%;
+		overflow-y: auto;
+	}
+	.modal.left .modal-body,
+	.modal.right .modal-body {
+		padding: 15px 15px 80px;
+	}
+  .modal.left.fade .modal-dialog{
+		right: 47rem;
+  }
+.modal.left.fade.in .modal-dialog{
+  left: 0;
+}
+
+	
+	.modal.right.fade.in .modal-dialog {
+		right: 0;
+	}
+
+/* ----- MODAL STYLE ----- */
+	.modal-content {
+		border-radius: 0;
+		border: none;
+	}
+
+	.modal-header {
+		border-bottom-color: #EEEEEE;
+		background-color: #FAFAFA;
+	}
+
+/* ----- v CAN BE DELETED v ----- */
+body {
+	background-color: #78909C;
+}
+
+.demo {
+	padding-top: 60px;
+	padding-bottom: 110px;
+}
+
+/* .btn-demo {
+	margin: 15px;
+	padding: 10px 15px;
+	border-radius: 0;
+	font-size: 16px;
+	background-color: #FFFFFF;
+} */
+
+.btn-demo:focus {
+	outline: 0;
+}
+
+.demo-footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 15px;
+	background-color: #212121;
+	text-align: center;
+}
+
+.demo-footer > a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	color: #fff;
+}
