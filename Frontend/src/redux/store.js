@@ -25,7 +25,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 export const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(studentApi.middleware, authApi.middleware),
+    getDefaultMiddleware().concat(studentApi.middleware, authApi.middleware, feeApi.middleware),
 });
 
 export const persistor = persistStore(store);

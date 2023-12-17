@@ -17,8 +17,7 @@ import {
       }),
 
       getUserById: builder.query({
-        query: (id) => `/userFee/${id}` 
-        
+        query: (id) => `/userFee/${id}`,
       }),
 
       deleteUser: builder.mutation({

@@ -24,6 +24,7 @@ import { SkeletonTheme } from "react-loading-skeleton";
 import { useSelector } from "react-redux";
 import AdminDashboard from './pages/AdminDashboard'
 import AddCategory from "./pages/AddCategory";
+import LeftModal from "./pages/LeftModal";
 
 
 const router = createBrowserRouter(
@@ -41,6 +42,7 @@ const router = createBrowserRouter(
       <Route path="/detail/:id" element={<Detail />} />
       <Route path="/addedit/:id" element={<AddEdit />} />
       <Route path="/feemodule" element={<FeeModule />} />
+      <Route path="/leftmodal/:id" element={<LeftModal />} />
 
       <Route element={<Requireauth />}>
       <Route path="/checkoutstudent" element={<CheckoutStudent />} />

@@ -39,9 +39,7 @@ export const getAllUsers = async (req, res, next) => {
 }
 
 export const getUserById = async (req, res, next) => {
-    const {
-        id
-    } = req.params;
+    const {id} = req.params;
     try {
         const userFee = await Fee.findById(id)
         if (userFee) {
@@ -56,11 +54,18 @@ export const getUserById = async (req, res, next) => {
 }
 
 export const createNewUser = async (req, res, next) => {
+    const newFee = req.body;
+    console.log(newFee);
     try {
-        const newFee = req.body;
-        console.log(newFee);
+        console.log("hello");
+        const r=await Fee.create(newFee);
+        console.log(r);
+        res.json({
+            fee:r,
+            message:'Fee created successfully'
+        })
     } catch (error) {
-        console.error(error);
+        next(error);
 
     }
 
@@ -100,13 +105,9 @@ export const updateUser = async (req, res, next) => {
 
 export const deleteUser = async (req, res, next) => {
     try {
-        const {
-            id
-        } = req.params;
+        const {id} = req.params;
         if (!id) {
-            return res.status(400).json({
-                error: 'Invalid ID provided'
-            });
+            return res.status(400).json({error: 'Invalid ID provided'});
         }
         const deletedUser = await Fee.findByIdAndDelete(id);
         if (!deletedUser) {

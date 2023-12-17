@@ -19,7 +19,7 @@ const feeSchema = new Schema({
         type:String,
         required:[true, 'Please provide the Month']
     },
-    year:{
+    date:{
         type:String,
         required:[true, 'Please provide the Year']
 
